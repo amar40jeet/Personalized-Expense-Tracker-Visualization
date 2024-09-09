@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+
+# Get user input
+categories = input("Enter the categories (comma separated): ").split(',')
+expenses = list(map(float, input("Enter the corresponding expenses (comma separated): ").split(',')))
+
+# Create a pie chart of expenses
+plt.figure(figsize=(8, 8))
+plt.pie(expenses, labels=categories, autopct='%1.1f%%', startangle=140)
+plt.title('Expense Distribution')
+plt.show()
